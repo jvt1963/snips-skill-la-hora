@@ -40,7 +40,7 @@ def intent_received(hermes, intent_message):
 	print((intent_message.intent.intent_name))
 	print()
 
-	if intent_message.intent.intent_name == 'gplaza:askTime':
+	if intent_message.intent.intent_name == 'jaimevegas:askTime':
 
 
 		print((intent_message.intent.intent_name))
@@ -67,7 +67,7 @@ def intent_received(hermes, intent_message):
 
 		hermes.publish_end_session(intent_message.session_id, sentence)
 
-	elif intent_message.intent.intent_name == 'gplaza:greetings':
+	elif intent_message.intent.intent_name == 'jaimevegas:greetings':
 
 		hermes.publish_end_session(intent_message.session_id, "De nada!")
 
