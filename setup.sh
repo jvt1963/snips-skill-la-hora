@@ -5,16 +5,16 @@ VENV=venv
 if [ ! -d "$VENV" ]
 then
 
-    PYTHON=`which python2`
+    PYTHON=`which python3`
 
     if [ ! -f $PYTHON ]
     then
-        echo "could not find python"
+        echo "Could not find Python 3"
     fi
-    virtualenv -p $PYTHON $VENV
+    $PYTHON -m venv $VENV
 
 fi
 
 . $VENV/bin/activate
 
-pip install -r requirements.txt
+pip3 install -r requirements.txt
